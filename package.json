@@ -1,0 +1,14 @@
+{
+  "name": "poc_playwright",
+  "version": "1.0.0",
+  "description": "POC para avaliação do Playwright para o trabalho final da Especialização em Testes Ágeis",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "thiago.andrade",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.40.1"
+  }
+}
