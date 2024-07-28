@@ -4,7 +4,9 @@
   "description": "POC para avaliação do Playwright para o trabalho final da Especialização em Testes Ágeis",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npx playwright test",
+    "headed": "npx playwright test --headed",
+    "debug": "npx playwright test --debug"
   },
   "author": "thiago.andrade",
   "license": "ISC",
