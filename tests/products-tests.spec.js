@@ -6,20 +6,20 @@ import { autoLogin } from '../utils/commands'
 test.describe('Testar feature lista de produtos', () => {
 
     let productsPage
-    let yourCartPage
 
     test.beforeEach(async ({ page }) => {
         productsPage = new ProductsPage(page)
-        yourCartPage = new YourCartPage(page)
         await autoLogin(page)
         await productsPage.validatePageTitle()
         await productsPage.validatePageUrl()
     })
 
-    test('Inserir produto no carrinho e validar que foi gravado corretamente no carrinho', async () => {
+    test('Inserir produto no carrinho e validar que foi gravado corretamente no carrinho', async ({ page }) => {
         await productsPage.clickBtnAddtoCart()
         await productsPage.validateBdgShoppingCartNumber('1')
         await productsPage.clickBtnGoToCart()
+        let yourCartPage
+        yourCartPage = new YourCartPage(page)
         await yourCartPage.validateProductName()
     })
 
@@ -32,11 +32,13 @@ test.describe('Testar feature lista de produtos', () => {
         await productsPage.validateBtnAddToCartVisible()
     })
 
-    test('Adicionar produto no carrinho pela página do produto e verificar que gravou corretamente no carrinho', async () => {
+    test('Adicionar produto no carrinho pela página do produto e verificar que gravou corretamente no carrinho', async ({ page }) => {
         await productsPage.clickImgProduct()
         await productsPage.clickBtnAddToCartFromProductPage()
         await productsPage.validateBdgShoppingCartNumber('1')
         await productsPage.clickBtnGoToCart()
+        let yourCartPage
+        yourCartPage = new YourCartPage(page)
         await yourCartPage.validateProductName()
     })
 

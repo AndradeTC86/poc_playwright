@@ -19,7 +19,9 @@ export async function setCart(page) {
 }
 
 export async function setCheckout(page) {
-  
+  await setCart(page)
+  const yourCartPage = new YourCartPage(page)
+  await yourCartPage.clickBtnCheckout()
 }
 
 export async function setCheckoutOverview(page) {

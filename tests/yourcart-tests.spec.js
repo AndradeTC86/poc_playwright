@@ -6,9 +6,7 @@ import { setCart } from '../utils/commands'
 
 test.describe('Testar feature Your Cart', () => {
 
-    let productsPage
     let yourCartPage
-    let checkoutYourInfo
 
     test.beforeEach(async ({ page }) => {
         await setCart(page)        
@@ -19,6 +17,7 @@ test.describe('Testar feature Your Cart', () => {
 
     test('Validar botão continuar comprando', async ({ page }) => {
         await yourCartPage.clickBtnContinueShopping()
+        let productsPage
         productsPage = new ProductsPage(page)
         await productsPage.validatePageTitle()
         
@@ -31,6 +30,7 @@ test.describe('Testar feature Your Cart', () => {
 
     test('Validar botão checkout', async ({ page }) => {
         await yourCartPage.clickBtnCheckout()
+        let checkoutYourInfo
         checkoutYourInfo = new CheckoutYourInformation(page)
         await checkoutYourInfo.validatePageTitle()
     })
