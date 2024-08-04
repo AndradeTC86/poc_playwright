@@ -1,9 +1,10 @@
 const LoginPage = require('../page_objects/LoginPage')
 const ProductsPage = require('../page_objects/ProductsPage')
 const YourCartPage = require('../page_objects/YourCartPage')
+const CheckoutYourInfoPage = require('../page_objects/CheckoutYourInformationPage')
+const CheckoutOverviewPage = require('../page_objects/CheckoutOverviewPage')
 import login from '../fixtures/login.json'
 import cliente from '../fixtures/clientes.json'
-import { time } from 'console'
 
 export async function autoLogin(page) {
   const loginPage = new LoginPage(page)
@@ -25,9 +26,14 @@ export async function setCheckout(page) {
 }
 
 export async function setCheckoutOverview(page) {
-  
+  await setCheckout(page)
+  const checkoutYourInfoPage = new CheckoutYourInfoPage(page)
+  await checkoutYourInfoPage.fillTextFields(cliente.firstName, cliente.lastName, cliente.zipCode)
+  await checkoutYourInfoPage.clickBtnContinue()
 }
 
 export async function setCheckoutComplete(page) {
-  
+  await setCheckoutOverview(page)
+  const checkoutOverviewPage = new CheckoutOverviewPage(page)
+  await checkoutOverviewPage.clickBtnContinue()
 }

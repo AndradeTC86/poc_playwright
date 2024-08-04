@@ -4,8 +4,8 @@ const produto = require('../fixtures/produtos.json')
 class YourCartePage {
   constructor(page) {
     this.page = page
-    this.lblTitle = "data-test=title"
-    this.lblItemName = "data-test=inventory-item-name"
+    this.lblTitle = 'data-test=title'
+    this.lblItemName = 'data-test=inventory-item-name'
     this.btnContinueShopping = 'data-test=continue-shopping'
     this.btnCheckout = 'data-test=checkout'    
   }

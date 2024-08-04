@@ -3,7 +3,7 @@ import { expect } from "@playwright/test"
 class CheckoutYourInformation{
     constructor(page) {
         this.page = page
-        this.lblTitle = "data-test=title"
+        this.lblTitle = 'data-test=title'
         this.btnCancel = 'data-test=cancel'
         this.btnContinue = 'data-test=continue'
         this.txtFirstName = 'data-test=firstName'
