@@ -1,4 +1,4 @@
-const { test, request, expect } = require('@playwright/test')
+const { test } = require('@playwright/test')
 const LoginPage = require('../page_objects/LoginPage')
 const ProductsPage = require('../page_objects/ProductsPage')
 const login = require('../fixtures/login.json')

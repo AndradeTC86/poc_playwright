@@ -1,14 +1,33 @@
 import { expect, request } from "playwright/test"
+const produtos = require('../fixtures/produtos.json')
 
 class ProductsPage {
   constructor(page) {
     this.page = page;
     this.lblTitle = "data-test=title"
     this.imgProduct = "data-test=inventory-item-sauce-labs-backpack-img"
+    this.btnCart = '.shopping-cart-link'
+    this.bdgShoppingCart = '.shopping_cart_badge'
+    this.lnkBackToProducts = 'data-test=back-to-products'
+    this.menuOrdenar = 'data-test=product-sort-container'
+    this.btnAddtoCart = 'data-test=add-to-cart'
+    this.btnRemovetoCart = 'data-test=remove'
   }
 
   async validatePageTitle() {
     await expect(this.page.locator(this.lblTitle)).toHaveText("Products")
+  }
+
+  async validatePageUrl(){
+    await expect(this.page).toHaveURL('https://www.saucedemo.com/inventory.html')
+  }
+
+  getBtnAddtoCart(produto){
+    return this.page.locator(`[data-test="add-to-cart-${produto}"]`)
+  }
+
+  async clickBtnAddtoCart(){
+    await this.getBtnAddtoCart(produtos[0].produto).click()
   }
 
   async validateWrongImage() {
