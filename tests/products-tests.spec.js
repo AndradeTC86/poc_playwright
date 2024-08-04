@@ -3,7 +3,6 @@ const LoginPage = require('../page_objects/LoginPage')
 const ProductsPage = require('../page_objects/ProductsPage')
 const YourCartPage = require('../page_objects/YourCartPage')
 const login = require('../fixtures/login.json')
-const produtos = require('../fixtures/produtos.json')
 
 test.describe('Testar feature lista de produtos', () => {
 

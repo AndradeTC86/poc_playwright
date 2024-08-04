@@ -165,9 +165,6 @@ class ProductsPage {
     const sortedPrices = [...unsortedPrices].sort((a, b) => b - a)
     expect(unsortedPrices).toEqual(sortedPrices)     
   }
-
-
-
 }
 
 module.exports = ProductsPage
