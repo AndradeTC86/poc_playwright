@@ -9,6 +9,10 @@ class LoginPage{
         this.msgLockedUser = 'data-test=error'
     }
 
+    async goto(){
+        await this.page.goto('/')
+    }
+
     async login(username, password){
         await this.page.fill(this.txtUserName, username)
         await this.page.fill(this.txtPassword, password)

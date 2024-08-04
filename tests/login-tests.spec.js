@@ -11,7 +11,7 @@ test.describe('Testar feature login', () => {
     test.beforeEach(async ({ page }) => {
         loginPage = new LoginPage(page)
         productsPage = new ProductsPage(page)
-        await loginPage.page.goto('/')
+        await loginPage.goto()
     })
 
     test('Realizar login com usuário standard', async () => {

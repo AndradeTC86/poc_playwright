@@ -1,21 +1,17 @@
 const { test } = require('@playwright/test')
-const LoginPage = require('../page_objects/LoginPage')
 const ProductsPage = require('../page_objects/ProductsPage')
 const YourCartPage = require('../page_objects/YourCartPage')
-const login = require('../fixtures/login.json')
+import { autoLogin } from '../utils/commands'
 
 test.describe('Testar feature lista de produtos', () => {
 
-    let loginPage
     let productsPage
     let yourCartPage
 
     test.beforeEach(async ({ page }) => {
-        loginPage = new LoginPage(page)
         productsPage = new ProductsPage(page)
         yourCartPage = new YourCartPage(page)
-        await loginPage.page.goto('/')
-        await loginPage.login(login.standard, login.password)
+        await autoLogin(page)
         await productsPage.validatePageTitle()
         await productsPage.validatePageUrl()
     })
