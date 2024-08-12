@@ -8,8 +8,6 @@ Esse é um repositório de automação de testes, desenvolvido para trabalhar co
 
 1. [Objetivo](#objetivo)
 2. [Estrtutura do projeto](#estrutura-do-projeto)
-3. [Features](#features)
-4. [Data](#data)
 5. [Setup inicial](#setup-inicial)
 6. [Executando Automação](#executando-automacao)
 
