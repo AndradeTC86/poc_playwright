@@ -18,13 +18,13 @@ O objetivo desse projeto é criar uma automação do site https://www.saucedemo.
 ## Estrutura do projeto
 
 ```
-|----- fixtures
-|----- page_objects
-|----- tests
-|----- utils
-|----- package-lock.json
-|----- package.json
-|----- playwright.config.js
+|--- fixtures
+|--- page_objects
+|--- tests
+|--- utils
+|--- package-lock.json
+|--- package.json
+|--- playwright.config.js
 ```
 
 ## Executando os testes
