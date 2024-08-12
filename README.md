@@ -9,7 +9,7 @@ Esse é um repositório de automação de testes, desenvolvido para trabalhar co
 1. [Objetivo](#objetivo)
 2. [Estrtutura do projeto](#estrutura-do-projeto)
 5. [Setup inicial](#setup-inicial)
-6. [Executando Automação](#executando-automacao)
+6. [Executando Automação](#executando-automação)
 
 ## Objetivo
 
