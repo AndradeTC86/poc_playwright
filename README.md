@@ -13,7 +13,7 @@ Esse é um repositório de automação de testes, desenvolvido para trabalhar co
 
 ## Objetivo
 
-O objetivo desse projeto é criar uma automação do site https://www.saucedemo.com/, utilizando [Playwright]([https://www.cypress.io/](https://playwright.dev/)) como framework de testes em combinação com a linguagem de programação Javascript, com a finalidade de comparar com os frameworks de teste Cypress e Selenium para o Trabalho de Conclusão de Curso da Especialização em Testes Ágeis da faculdade CESAR School.
+O objetivo desse projeto é criar uma automação do site https://www.saucedemo.com/, utilizando [Playwright](https://playwright.dev/) como framework de testes em combinação com a linguagem de programação Javascript, com a finalidade de comparar com os frameworks de teste Cypress e Selenium para o Trabalho de Conclusão de Curso da Especialização em Testes Ágeis da faculdade CESAR School.
 
 ## Estrutura do projeto
 
