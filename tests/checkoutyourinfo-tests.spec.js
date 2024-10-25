@@ -19,8 +19,7 @@ test.describe('Testar feature Checkout Your Information', () => {
     test('Clicar botão cancelar deve retornar ao carrinho e não salva as informações', async ({ page }) => {        
         await checkoutYourInfoPage.fillTextFields(cliente.firstName, cliente.lastName, cliente.zipCode)
         await checkoutYourInfoPage.clickBtnCancel()
-        let yourCartPage
-        yourCartPage = new YourCartPage(page)
+        let yourCartPage = new YourCartPage(page)
         await yourCartPage.validatePageTitle()
         await yourCartPage.validatePageUrl()
         await yourCartPage.clickBtnCheckout()
@@ -32,8 +31,7 @@ test.describe('Testar feature Checkout Your Information', () => {
     test('Validar preencher os campos de texto e clicar em continuar', async ({ page }) => {        
         await checkoutYourInfoPage.fillTextFields(cliente.firstName, cliente.lastName, cliente.zipCode)
         await checkoutYourInfoPage.clickBtnContinue()
-        let checkoutOverviewPage
-        checkoutOverviewPage = new CheckoutOverviewPage(page)
+        let checkoutOverviewPage = new CheckoutOverviewPage(page)
         await checkoutOverviewPage.validatePageTitle()
         await checkoutOverviewPage.validatePageUrl()
     })
@@ -48,5 +46,4 @@ test.describe('Testar feature Checkout Your Information', () => {
         await checkoutYourInfoPage.clickBtnContinue()
         await checkoutYourInfoPage.validateZipCodeRequiredMessage()
     })
-
 })

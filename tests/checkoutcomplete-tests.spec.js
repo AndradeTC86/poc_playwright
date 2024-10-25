@@ -16,8 +16,7 @@ test.describe('Testar feature Checkout Complete', () => {
 
     test('Clicar no botão voltar para home deve voltar a página de produtos', async ({ page }) => {
         await checkoutCompletePage.clickBtnBackToHome()
-        let productsPage
-        productsPage = new ProductsPage(page)
+        let productsPage = new ProductsPage(page)
         await productsPage.validatePageTitle()
         await productsPage.validatePageUrl()        
     })

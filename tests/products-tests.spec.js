@@ -18,8 +18,7 @@ test.describe('Testar feature lista de produtos', () => {
         await productsPage.clickBtnAddtoCart()
         await productsPage.validateBdgShoppingCartNumber('1')
         await productsPage.clickBtnGoToCart()
-        let yourCartPage
-        yourCartPage = new YourCartPage(page)
+        let yourCartPage = new YourCartPage(page)
         await yourCartPage.validateProductName()
     })
 
@@ -37,8 +36,7 @@ test.describe('Testar feature lista de produtos', () => {
         await productsPage.clickBtnAddToCartFromProductPage()
         await productsPage.validateBdgShoppingCartNumber('1')
         await productsPage.clickBtnGoToCart()
-        let yourCartPage
-        yourCartPage = new YourCartPage(page)
+        let yourCartPage = new YourCartPage(page)
         await yourCartPage.validateProductName()
     })
 
@@ -73,12 +71,10 @@ test.describe('Testar feature lista de produtos', () => {
     test('Ordenar produtos em preço do menor para o maior', async () => {
         await productsPage.orderByPriceLowtoHigh()
         await productsPage.validateSortedProductsLowToHigh()
-
     })
 
     test('Ordenar produtos em preço do maior para o menor', async () => {
         await productsPage.orderByPriceHightoLow()
         await productsPage.validateSortedProductsHighToLow()
-
     })
 })
